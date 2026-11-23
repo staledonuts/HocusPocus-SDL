@@ -1,10 +1,10 @@
 # Hocus Pocus SDL3
 
 ## Features
-- _Smooth Motion_, interpolation between engine timesteps for a smoother experience.
-- Scanlines.
+- _Smooth Motion_, interpolation between engine timesteps for a smoother experience. (disabled by default)
+- Scanlines. (disabled by default)
 - Gamepad Support.
-- Input re-maping for keyboard.
+- Input re-mapping for keyboard.
 - Aspect Ratio settings.
 - Interger Scale for pixel perfect visuals.
 
