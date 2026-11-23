@@ -1,5 +1,13 @@
 # Hocus Pocus SDL3
 
+## Features
+- _Smooth Motion_, interpolation between engine timesteps for a smoother experience.
+- Scanlines.
+- Gamepad Support.
+- Input re-maping for keyboard.
+- Aspect Ratio settings.
+- Interger Scale for pixel perfect visuals.
+
 ## Installation
 
 In the data folder you can find the shareware version of Hocus Pocus, the compiled executable will search for the hocus.dat file in these folders.
@@ -11,7 +19,7 @@ bundled Shareware data next to the executable (<base_dir>/data/) is secondary.
 
 ## Compilation
 
-Will be updated with instructions when I get around to it.
+You need [ODIN](https://odin-lang.org/docs/install/) installed and setup correctly and access to the [SDL3 DLL/Library file](https://github.com/libsdl-org/SDL) for the OS you are building on. then you basically just run "odin build ." in sourcecode folder and plop the dll / library in the same folder as the compiled executable.
 
 ## Context/Credits
 
