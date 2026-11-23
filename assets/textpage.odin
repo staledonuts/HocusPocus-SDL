@@ -11,16 +11,6 @@ Text_Page :: struct #packed {
 }
 #assert(size_of(Text_Page) == 1686)
 
-load_text_page :: proc(page: ^Text_Page, dat: ^Dat_File, id: Chunk_ID) -> bool {
-	if page == nil || dat == nil do return false
-	chunk, ok := get_chunk(dat, id)
-	if !ok || len(chunk) < size_of(Text_Page) {
-		return false
-	}
-	mem.copy(page, raw_data(chunk), size_of(Text_Page))
-	return true
-}
-
 load_text_page_offset :: proc(
 	page: ^Text_Page,
 	dat: ^Dat_File,

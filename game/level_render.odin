@@ -186,16 +186,6 @@ draw_level_viewport_px :: proc(
 	render.batch_reset_scissor(&r.batch)
 }
 
-draw_level_viewport :: proc(
-	r: ^render.GPU_Renderer,
-	lvl: ^Level_Data,
-	gfx: ^Level_Graphics,
-	cam_x_t8: int,
-	cam_y: int,
-) {
-	draw_level_viewport_px(r, lvl, gfx, f32(cam_x_t8 * 8), f32(cam_y * 16))
-}
-
 @(private)
 draw_hud_digit :: proc(
 	r: ^render.GPU_Renderer,

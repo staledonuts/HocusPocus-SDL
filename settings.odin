@@ -87,14 +87,6 @@ init_default_settings :: proc(s: ^User_Settings) {
 	s.gamepad_deadzone = 25
 }
 
-settings_path_from_sav :: proc(sav_path: string, allocator := context.allocator) -> string {
-	slash := strings.last_index_any(sav_path, "/\\")
-	if slash < 0 {
-		return strings.clone("hocus_sdl.cfg", allocator)
-	}
-	return fmt.aprintf("%shocus_sdl.cfg", sav_path[:slash + 1], allocator = allocator)
-}
-
 scancode_display_name :: proc(sc: sdl.Scancode) -> string {
 	if sc == .UNKNOWN {
 		return "---"

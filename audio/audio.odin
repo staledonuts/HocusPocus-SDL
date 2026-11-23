@@ -497,18 +497,6 @@ play_music_bytes :: proc(a: ^Audio_System, data: []u8, looping: bool) -> bool {
 	return ok
 }
 
-stop_music :: proc(a: ^Audio_System) {
-	if a == nil do return
-	if a.music_stream != nil {
-		_ = sdl.LockAudioStream(a.music_stream)
-	}
-	midi_player_stop(&a.midi)
-	if a.music_stream != nil {
-		_ = sdl.UnlockAudioStream(a.music_stream)
-		_ = sdl.ClearAudioStream(a.music_stream)
-	}
-}
-
 set_sfx_enabled :: proc(a: ^Audio_System, enabled: bool) {
 	if a == nil do return
 	a.sfx_enabled = enabled

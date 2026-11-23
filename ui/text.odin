@@ -138,20 +138,6 @@ draw_text_gs :: proc(
 	draw_text_gradient(r, f, x, y, grd, text)
 }
 
-draw_text_gob :: proc(
-	r: ^render.GPU_Renderer,
-	f: ^GPU_Font,
-	x, y: int,
-	grd: Gradient_Color,
-	text: string,
-) {
-	draw_text_plain(r, f, x + 1, y, 1, text)
-	draw_text_plain(r, f, x - 1, y, 1, text)
-	draw_text_plain(r, f, x, y + 1, 1, text)
-	draw_text_plain(r, f, x, y - 1, 1, text)
-	draw_text_gradient(r, f, x, y, grd, text)
-}
-
 draw_text_g_centered :: proc(
 	r: ^render.GPU_Renderer,
 	f: ^GPU_Font,

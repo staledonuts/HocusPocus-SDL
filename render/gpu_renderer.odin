@@ -338,24 +338,6 @@ set_palette :: proc(r: ^GPU_Renderer, pal: assets.Palette) {
 	r.palette_dirty = true
 }
 
-fade_set_black :: proc(r: ^GPU_Renderer) {
-	r.fade = Fade_State {
-		color  = {0, 0, 0},
-		amount = 1.0,
-		target = 1.0,
-		active = false,
-	}
-}
-
-fade_clear :: proc(r: ^GPU_Renderer) {
-	r.fade = Fade_State {
-		color  = {0, 0, 0},
-		amount = 0.0,
-		target = 0.0,
-		active = false,
-	}
-}
-
 fade_from_black :: proc(r: ^GPU_Renderer, duration_sec: f32) {
 	r.fade = Fade_State {
 		color    = {0, 0, 0},

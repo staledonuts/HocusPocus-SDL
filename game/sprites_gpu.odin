@@ -199,16 +199,3 @@ draw_sprite_px :: proc(
 		color_index = color_idx,
 	)
 }
-
-draw_sprite :: proc(
-	r: ^render.GPU_Renderer,
-	bank: ^Sprite_Bank,
-	slot: int,
-	x_col4: int,
-	y_px: int,
-	dir: int,
-	frame: int,
-	flash: Sprite_Flash = .None,
-) {
-	draw_sprite_px(r, bank, slot, f32(x_col4 * 4), f32(y_px), dir, frame, flash)
-}
