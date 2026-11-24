@@ -19,7 +19,7 @@ bundled Shareware data next to the executable (<base_dir>/data/) is secondary.
 
 ## Compilation
 
-You need [ODIN](https://odin-lang.org/docs/install/) installed and setup correctly and access to the [SDL3 DLL/Library file](https://github.com/libsdl-org/SDL) for the OS you are building on. then you basically just run "odin build ." in sourcecode folder and plop the dll / library in the same folder as the compiled executable.
+You need [ODIN](https://odin-lang.org/docs/install/) installed and setup correctly and access to the [SDL3 DLL/Library file](https://github.com/libsdl-org/SDL) for the OS you are building on. then you basically just run "odin build . -o:speed" in sourcecode folder and plop the dll / library in the same folder as the compiled executable. -o:speed is the flag for more aggressive removal of debug code.
 
 ## Context/Credits
 
